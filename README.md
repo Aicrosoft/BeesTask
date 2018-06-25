@@ -21,11 +21,27 @@
 [json]: https://www.nuget.org/packages/Newtonsoft.Json/ "Newtonsoft.Json"
 [icon]: ./doc/icon_64.png "BeesTask icon"
 [logo]: ./doc/icon_128.png "BeesTask Logo"
-[license]: ./LICENSE "MIT license"
 [rbp]:https://github.com/RiseSoho/RiseNetBoilerplate "RiseNetBoilerplate project"
+[license]: https://img.shields.io/github/license/RiseSoho/BeesTask.svg "MIT license"
 
 
+----------------------
+![license]
 
+## Nuget Packages ##         
+|Package|Status|
+|:------|:-----:|
+|BeesTask|[![NuGet version](https://badge.fury.io/nu/BeesTask.svg)](https://badge.fury.io/nu/BeesTask)|
+|BeesTask.App|[![NuGet version](https://badge.fury.io/nu/eesTask.App.svg)](https://badge.fury.io/nu/eesTask.App)|
+
+
+----------------------
+
+### 编译说明 ####
+|.Net版本|条件编译符号|
+|------:|:------|
+|.net4.5|``NET45`` |      
+|.NetCoreApp|`` NETCOREAPP ``|
 
 ----------
 
