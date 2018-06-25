@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <Version>0.6.0.0</Version>
+    <Version>0.7.0.0</Version>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     <PackageLicenseUrl>https://github.com/RiseSoho/BeesTask/blob/dev/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/RiseSoho/BeesTask</PackageProjectUrl>

@@ -16,6 +16,7 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <Description>this task scheduling framework is only prepare for devloper.</Description>
     <RootNamespace>RS.BeesTask.App</RootNamespace>
+    <ApplicationIcon>icon_128.ico</ApplicationIcon>
 
   </PropertyGroup>
 
@@ -37,7 +38,6 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Configuration.Install">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.Install.dll</HintPath>
     </Reference>
   </ItemGroup>
 
