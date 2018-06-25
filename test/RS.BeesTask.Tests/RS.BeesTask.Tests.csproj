@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\RS.BeeTask\RS.BeeTask.csproj" />
+    <ProjectReference Include="..\..\src\RS.BeeTask\RS.BeesTask.csproj" />
   </ItemGroup>
 
 </Project>

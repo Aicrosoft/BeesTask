@@ -12,22 +12,8 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-
     <Description>this task scheduling framework is only prepare for devloper.</Description>
-
     <RootNamespace>RS</RootNamespace>
-
-    <Authors>Joe</Authors>
-
-    <Version>0.6.0</Version>
-
-    <PackageLicenseUrl>https://github.com/RiseSoho/BeeTask/blob/dev/LICENSE</PackageLicenseUrl>
-
-    <PackageProjectUrl>https://github.com/RiseSoho/BeeTask</PackageProjectUrl>
-
-    <PackageIconUrl>https://github.com/RiseSoho/BeeTask/raw/dev/doc/icon_128.png</PackageIconUrl>
-
-    <RepositoryUrl>https://github.com/RiseSoho/BeeTask</RepositoryUrl>
 
   </PropertyGroup>
 
