@@ -18,8 +18,11 @@ namespace RS.TaskScheduling
         /// </summary>
         public string Message { get; set; }
 
+        /// <summary>
+        /// 任务返回的扩展数据携带属性
+        /// </summary>
         [XmlIgnore]
-        public object ExtendMessage { get; set; }
+        public object Data { get; set; }
     }
 
     /// <summary>

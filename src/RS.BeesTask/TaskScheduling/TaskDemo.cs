@@ -16,7 +16,7 @@ namespace RS.TaskScheduling
     /// <history>
     ///   2010-4-23 10:22:02 , zhouyu ,  创建	     
     ///  </history>
-    public class TaskDemo:TaskProvider
+    public class TaskDemo : TaskProvider
     {
         private readonly ILogger _logWork = LogManager.GetCurrentClassLogger();
 
@@ -24,7 +24,7 @@ namespace RS.TaskScheduling
         private static readonly Random rand = new Random();
         protected static int RandSeconds()
         {
-            return rand.Next(2000, 6000);
+            return rand.Next(49800, 99990);
         }
 
 
@@ -32,15 +32,18 @@ namespace RS.TaskScheduling
         {
             var stamp = TaskResultType.Succeed;
             var rs = RandSeconds();
-            if (rs > 4500)
+            if (rs > 99900)
                 stamp = TaskResultType.Failed;
 
-            Thread.Sleep(rs );
+            Thread.Sleep(rs);
 
-            _logWork.Info("我是执行的任务,工作了{0}秒", rs / 1000);
-
-            throw new NotSupportedException("测试用");
-            return new TaskResult() { Result = stamp };
+            var msg = $"我是执行的任务,工作了 { rs / 1000} 秒";
+            _logWork.Info(msg);
+            if (stamp == TaskResultType.Failed)
+            {
+                throw new NotSupportedException($"测试用：执行时间超过了 {rs / 1000} 秒。");
+            }
+            return new TaskResult() { Result = stamp, Message = msg };
         }
 
 

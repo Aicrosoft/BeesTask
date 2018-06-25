@@ -22,6 +22,7 @@ namespace RS.TaskScheduling
     ///  </history>
     public abstract class TaskProvider : IDisposable
     {
+
         #region 变量 属性
 
         /// <summary>
@@ -174,7 +175,7 @@ namespace RS.TaskScheduling
                     Log.Error(ex, $"执行任务<{Task}>时发生异常:");
                     //throw;
                     val.Result = TaskResultType.Error;
-                    val.ExtendMessage = ex.Message;
+                    val.Message = ex.Message;
                 }
                 finally
                 {
@@ -183,7 +184,7 @@ namespace RS.TaskScheduling
                 }
 
                 var runSpan = SystemTime.Now() - now;
-                Log.Info($"[{this}] 第{_runTimes}次执行结果[{val.Result} : {val.Message}] [Execution:{runSpan}]");
+                Log.Info($"[{this}] 第 {_runTimes} 次执行，结果 [{val.Result} : {val.Message}] [RuningTime:{runSpan}]");
 
                 //Note:工作完成后的状态处理
                 //Note:注意，这里的错误次数实际上是执行失败的次数
@@ -205,10 +206,10 @@ namespace RS.TaskScheduling
                         Log.Debug($"[{this}] 下次运行时间为null，当前任务停止。");
                         return;
                     }
-                    if (runInterval.Value.TotalMilliseconds > WorkerInterval * 5)
+                    if (runInterval.Value.TotalMilliseconds > WorkerInterval * 3)
                     {
                         ChangeStatus(TaskRunStatusType.Removing);
-                        Log.Debug($"[{this}] 下次运行时间{runInterval}，超过5倍工作线程间隔，暂时移除执行队列。当前任务停止。");
+                        Log.Debug($"[{this}] 下次运行时间{runInterval}，超过3倍工作线程间隔，暂时移除执行队列。当前任务停止。");
                         return;
                     }
 
