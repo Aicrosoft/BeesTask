@@ -26,6 +26,8 @@ namespace RS.TaskScheduling
     ///  </history>
     public sealed class Task4WinService : IDisposable
     {
+
+
         #region 相关属性设定
 
         /// <summary>
@@ -70,16 +72,17 @@ namespace RS.TaskScheduling
             lock (this)
             {
                 _watcher.Stop();
-                _log.Debug($"↓---- 任务监视轮询开始 ----    [下次轮询延时: {_watcher.Interval / 1000}秒 ; 当前时间:{DateTime.Now:HH:mm:ss ffffff}]");
+                _log.Debug($"↓---- 监视工人第 {++_workTimes} 次巡视开始 ----");
 
                 TryRemoveTask();
 
                 StartSettingTasks();
 
+                //变更下次巡视时间
                 _watcher.Interval = ((TimeSpan)TaskSetting.WatchTimer.WorkingInterval).TotalMilliseconds;
-                _workTimes++;
+                //_workTimes++;
 
-                _log.Debug($"↑---- 任务监视轮询结束[Times:{_workTimes}] ----  [当前时间:{DateTime.Now:HH:mm:ss ffffff}]");
+                _log.Debug($"↑---- 监视工人巡视结束 ---- < {_watcher.Interval / 1000} 秒后再次巡视> ----");
                 _watcher.Start();
             }
         }
@@ -184,6 +187,7 @@ namespace RS.TaskScheduling
 
         #endregion
 
+
         #region 监工工作 开始 暂停 配置变更
 
         /// <summary>
@@ -207,10 +211,11 @@ namespace RS.TaskScheduling
                 _watcher = new Timer(TaskSetting.WatchTimer.DelayMillisecond); //Note:第一次运行不按间隔时间执行。
                 _watcher.Elapsed += Working;
                 _watcher.Start(); //启动工作回调
-                _log.Debug($"监视工人第一次工作将于{TimeSpan.FromMilliseconds(_watcher.Interval)}后执行");
+                _log.Debug($"监视工人将于{TimeSpan.FromMilliseconds(_watcher.Interval)}后巡视。");
                 _log.Debug("----- 服务启动完成 -----");
             }
         }
+
 
         #region 监督配置事件 tasks.config
 
@@ -254,6 +259,7 @@ namespace RS.TaskScheduling
         }
 
         #endregion
+
 
         ///// <summary>
         ///// 移除可能过期的任务
@@ -336,6 +342,7 @@ namespace RS.TaskScheduling
         }
 
         #endregion
+
 
         /// <summary>
         /// 资源释放
