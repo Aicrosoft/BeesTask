@@ -1,11 +1,11 @@
 <Project>
   <PropertyGroup>
-    <Version>0.5.0.0</Version>
+    <Version>0.7.0.0</Version>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
-    <PackageIconUrl>https://github.com/RiseSoho/RiseNetBoilerplate/raw/dev/doc/icon128.png</PackageIconUrl>
-    <PackageProjectUrl>https://github.com/RiseSoho/RiseNetBoilerplate</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/RiseSoho/RiseNetBoilerplate/blob/dev/LICENSE</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/RiseSoho/RiseNetBoilerplate</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/RiseSoho/BeesTask/blob/dev/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/RiseSoho/BeesTask</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/RiseSoho/BeesTask/raw/dev/doc/icon_128.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/RiseSoho/BeesTask</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <!--<AssemblyVersion>0.2.1.1</AssemblyVersion>
     <FileVersion>0.2.1.1</FileVersion>-->

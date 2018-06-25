@@ -1,13 +1,13 @@
-# BeeTask
+# BeesTask
 
 ![icon]
 
- Welcome to BeeTask, this task scheduling framework is only prepare for devloper.
+ Welcome to BeesTask, this task scheduling framework is only prepare for devloper.
 
 
 #### 欢迎使用**蜂群**任务框架，注意：此框架针对开发人员。
  - 作用：任务调度框架，类似于Quartz.Net。按接口实现实现任务，在配置里设定调用参数；
- - 原项目地址：[SwarmTask] ，2018-06-22 项目更名为BeeTasks（中文代号：蜂群）；
+ - 原项目地址：[SwarmTask] ，2018-06-22 项目更名为BeesTasks（中文代号：蜂群）；
  - 以高性能，高效率为升级设计目标，升级项目为VS2017 IDE环境 , .Net版本4.5,NetCore2
 
 ### Build & Test Status ###
@@ -19,13 +19,29 @@
 
 [SwarmTask]: https://github.com/CSStudio/SwarmTask "SwarmTask"
 [json]: https://www.nuget.org/packages/Newtonsoft.Json/ "Newtonsoft.Json"
-[icon]: ./doc/icon_64.png "BeeTask icon"
-[logo]: ./doc/icon_128.png "BeeTask Logo"
-[license]: ./LICENSE "MIT license"
+[icon]: ./doc/icon_64.png "BeesTask icon"
+[logo]: ./doc/icon_128.png "BeesTask Logo"
 [rbp]:https://github.com/RiseSoho/RiseNetBoilerplate "RiseNetBoilerplate project"
+[license]: https://img.shields.io/github/license/RiseSoho/BeesTask.svg "MIT license"
 
 
+----------------------
+![license]
 
+## Nuget Packages ##         
+|Package|Status|
+|:------|:-----:|
+|BeesTask|[![NuGet version](https://badge.fury.io/nu/BeesTask.svg)](https://badge.fury.io/nu/BeesTask)|
+|BeesTask.App|[![NuGet version](https://badge.fury.io/nu/eesTask.App.svg)](https://badge.fury.io/nu/eesTask.App)|
+
+
+----------------------
+
+### 编译说明 ####
+|.Net版本|条件编译符号|
+|------:|:------|
+|.net4.5|``NET45`` |      
+|.NetCoreApp|`` NETCOREAPP ``|
 
 ----------
 
@@ -50,21 +66,21 @@
 
 ### 三、任务驱动UML图
 
-![UML类图](./doc/beetask-core.gif)
+![UML类图](./doc/BeesTask-core.gif)
 
 
 
 ### 四、项目内容：
 
- - RS.BeeTask.Runner 运行宿主
- - RS.BeeTask 任务调度框架
- - RS.BeeTask.Tests 一些测试，这个随便写的
+ - RS.BeesTask.Runner 运行宿主
+ - RS.BeesTask 任务调度框架
+ - RS.BeesTask.Tests 一些测试，这个随便写的
  - RS.Lib[v3.0]  **Rs.Lib** 是一个通用常用库，项目地址：[rbp]
 
 
 ### 五、任务实现代码：
 
- - 参见CS.TaskScheduling.TaskDemo, RS.BeeTask.Framwork的示例实现；
+ - 参见CS.TaskScheduling.TaskDemo, RS.BeesTask.Framwork的示例实现；
  - 继承TaskProvider类后，重写protected override Result Work() 即可；
  - 如果自已扩展了Extend节点，则要重写public override void InitExtend()方法；
  - 具体备置可参见Tasks.config文件
@@ -72,9 +88,9 @@
 
 ### 六、WindService的调试：
 
- - 测试：在控制台中执行 `RS.BeeTask -t`
- - 安装：在控制台中执行 `RS.BeeTask -i`
- - 卸载：在控制台中执行 `RS.BeeTask -u`
+ - 测试：在控制台中执行 `RS.BeesTask -t`
+ - 安装：在控制台中执行 `RS.BeesTask -i`
+ - 卸载：在控制台中执行 `RS.BeesTask -u`
 
 ### 七、更新列表：
 
