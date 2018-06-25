@@ -10,13 +10,13 @@ using System.Runtime.InteropServices;
 //[assembly: AssemblyTitle("RiseAISoft Asp.net Boilerplate")]
 //[assembly: AssemblyDescription("RiseAISoft Asp.net Boilerplate")]
 //[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("RiseAISoft.com")]
-[assembly: AssemblyProduct("BeeTask")]
+[assembly: AssemblyCompany("risesoft.com.cn")]
+[assembly: AssemblyProduct("BeesTask")]
 //[assembly: AssemblyCopyright("Copyright © 2016")]
-[assembly: AssemblyTrademark("Rsbp")]
+[assembly: AssemblyTrademark("BeesTask")]
 [assembly: AssemblyCulture("")]
 
-[assembly: InternalsVisibleTo("Rsbp")]
+[assembly: InternalsVisibleTo("BeesTask")]
 
 
 // Setting ComVisible to false makes the types in this assembly not visible 

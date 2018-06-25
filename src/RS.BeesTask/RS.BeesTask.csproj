@@ -5,8 +5,8 @@
   <PropertyGroup>
     <!-- 框架类型在前面的，可以在属性面板里进行编译。 -->
     <TargetFrameworks>netstandard2.0;net45;</TargetFrameworks>
-    <AssemblyName>RS.BeeTask</AssemblyName>
-    <PackageId>BeeTask</PackageId>
+    <AssemblyName>RS.BeesTask</AssemblyName>
+    <PackageId>BeesTask</PackageId>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageTags>job,task,scheduling</PackageTags>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
