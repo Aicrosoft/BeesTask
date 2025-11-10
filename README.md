@@ -1,3 +1,6 @@
+
+# 该项目已过期，移步：[JobAgent](https://github.com/neatFactory/JobAgent) 查看最新的跨平台版本
+
 # BeesTask
 
 ![icon]
